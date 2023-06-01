@@ -8,4 +8,4 @@ El proyecto consiste en una tienda de videojuegos en formato digital, de manera 
 
 #Casos donde no podría funcionar
 
--Debe escribirse el nombre específico del videojuego o aplicación, ocurrirá un error ya que no encuentra coincidencia y obtiene un valor nulo (esto incluye espacios y mayusculas)
+- Debe escribirse el nombre específico del videojuego o aplicación, ocurrirá un error ya que no encuentra coincidencia y obtiene un valor nulo (esto incluye espacios y mayusculas)
