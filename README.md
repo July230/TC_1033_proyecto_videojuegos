@@ -4,7 +4,7 @@ El proyecto consiste en una tienda de videojuegos en formato digital, de manera 
 
 #Funciones principales
 - Un usuario accede y busca un videojuego o aplicación en específico
-- Se pueden añadir nuevos juegos y/o aplicaciones
+- El administrador puede añadir nuevos juegos y/o aplicaciones
 
 #Casos donde no podría funcionar
 
