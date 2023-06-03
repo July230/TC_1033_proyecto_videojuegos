@@ -1,4 +1,4 @@
-//Archivo que tiene el contenido en si
+//Archivo que contiene el contenido
 #include<iostream>
 
 using namespace std;
@@ -20,7 +20,7 @@ class Contenido{
         void set_price(float price);
         string get_version(){return version;}
         void set_version(string version);
-
+        virtual void muestra_contenido();
 };
 
 //Constructor de la clase contenido
@@ -49,6 +49,15 @@ void Contenido::set_version(string _version){
     version = _version;
 }
 
+void Contenido::muestra_contenido(){
+    cout << "Nombre: " << get_name() << endl;
+    cout << "Año de Salida: " << get_year() << endl;
+    cout << "Calificación: " << get_rate() << endl;
+    cout << "Precio:  $" << get_price() << endl;
+    cout << "Versión " << get_version() << endl;
+
+}
+
 //Clase videojuego
 class Videojuego : public Contenido{
     private:
@@ -61,21 +70,15 @@ class Videojuego : public Contenido{
             genre = _genre;
             tag = _tag; //Pido las variables de videojuego
         } 
-        void muestra_videojuego();
+        void muestra_videojuego(); //Sobreescritura de muestra_contenido
 };
 
 void Videojuego::muestra_videojuego(){
-    cout << "Nombre: " << get_name() << endl;
-    cout << "Año de Salida: " << get_year() << endl;
-    cout << "Calificación: " << get_rate() << endl;
-    cout << "Precio:  $" << get_price() << endl;
     cout << "Género: " << genre << endl;
     cout << "Etiquetas: " << tag << endl;
-    cout << "Versión " << get_version() << endl;
     cout << "\n" << endl;
 }
 
-//Para los mods y dlcs, agregar una función del tipo 'agrega_dlc()'
 
 //Clase aplicación
 class App : public Contenido{
@@ -87,16 +90,11 @@ class App : public Contenido{
             use = _use;
             type = _type;
         }
-        void muestra_app();
+        void muestra_app(); //Sobreescritura
 };
 
-void App::muestra_app(){
-    cout << "Nombre: " << get_name() << endl;
-    cout << "Año de Salida: " << get_year() << endl;
-    cout << "Calificación: " << get_rate() << endl;
-    cout << "Precio:  $" << get_price() << endl;
+void App::muestra_app(){ //funcion muestra_contenido
     cout << "Tipo de aplicación: " << type << endl;
     cout << "Uso de aplicación: " << use << endl;
-    cout << "Versión: " << get_version() << endl;
     cout << "\n" << endl;
 }
