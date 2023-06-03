@@ -1,9 +1,4 @@
-//Este es el código del proyecto de tienda de videojuegos y aplicaciones
-//Avance 1 (Herencia)
 //Ian Julián Estrada Castro - A01252823
-
-//Ian Julián Estrada Castro - A01252823
-
 #include<iostream>
 #include<stdlib.h>
 #include<vector>
