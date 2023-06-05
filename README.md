@@ -3,8 +3,9 @@ En este repositorio se encuentran los archivos correspondientes al proyecto de l
 El proyecto consiste en una Tienda de videojuegos en formato digital, de manera similar a la programas como steam. Se pueden adquirir videojuegos y aplicaciones desde este programa, además se pueden añadir nuevos productos a la tienda. Los videojuegos además también cuentan con contenido descargable adicional.
 
 #Funciones principales
-- Un usuario accede y busca un videojuego o aplicación en específico
-- El administrador puede añadir nuevos juegos y/o aplicaciones
+- Un usuario accede con un nombre y una contraseña que elige
+- El usuario busca algun videojuego o app por el nombre
+- El administrador puede añadir nuevos juegos y/o aplicaciones (desde el código fuente)
 
 #Casos donde no podría funcionar
 
