@@ -2,7 +2,6 @@
 
 #include<iostream>
 #include<string>
-#include<stdlib.h>
 
 using namespace std;
 
@@ -12,12 +11,10 @@ class Usuario{
     public:
         void enter_user(){ //Función para introducir usuario
             cout << "Ingresa tu usuario: ";
-            cin >> username;
-            cin.ignore(); //cin.ignore() para evitar que se "brinque" el buscador
+            getline(cin, username);
 
             cout << "Ingresar contraseña: ";
-            cin >> password;
-            cin.ignore();
+            getline(cin, password);
         }
         void muestra_usuario(){ //Función que muestra el nombre
             cout << "Bienvenido " << username << "\n";
