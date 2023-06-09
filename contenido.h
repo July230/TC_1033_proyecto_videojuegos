@@ -1,5 +1,9 @@
 //Archivo que contiene el contenido
 #include<iostream>
+#include<vector>
+#include<string>
+#include<stdlib.h>
+#include"extras.h"
 
 using namespace std;
 
@@ -16,7 +20,7 @@ class Contenido{
         void set_year(int year);
         int get_rate(){return rate;}
         void set_rate(int rate);
-        int get_price(){return price;}
+        float get_price(){return price;}
         void set_price(float price);
         string get_version(){return version;}
         void set_version(string version);
@@ -58,9 +62,15 @@ void Contenido::muestra_contenido(){
 
 }
 
+
 //Clase videojuego
 class Videojuego : public Contenido{
     private:
+        //Para la composición con Mods y DLC's
+        vector<DLC> dlcs;
+        vector<Mod> mods;
+
+        //Atributos de videojuego
         string genre;
         string tag;
     public:
@@ -69,16 +79,73 @@ class Videojuego : public Contenido{
         //Contenido(): Constructor de padre, porque atributos son provados, para acceder a ellos, más las variables exclusivas de Videojuego    
             genre = _genre;
             tag = _tag; //Pido las variables de videojuego
+
         } 
         void muestra_videojuego(); //Sobreescritura de muestra_contenido
+
+        //Para aplicar la composición y los buscadores de mods y dlc's
+        void agregarDLC(const DLC& dlc); //Referencia constante usando "&" 
+        void agregarMod(const Mod& mod);
+        void buscarDLC(const string& nombreDLC);
+        void buscarMod(const string& nombreMod);
+
 };
 
 void Videojuego::muestra_videojuego(){
     cout << "Género: " << genre << endl;
     cout << "Etiquetas: " << tag << endl;
     cout << "\n" << endl;
+
+    if(dlcs.size()>0 || mods.size()>0){
+        cout << "Contenido adicional disponible para este juego" << endl;
+    }
+        if(dlcs.size()>0){
+        cout << "DLC's disponibles: " << endl;
+        for(const DLC& dlc : dlcs){ //Variable const no se puede modificar
+            cout << "- " << dlc.get_name() << endl;
+        }
+    }else{
+        cout << "No hay DLC's disponibles para este juego" << endl;
+    }
+    if(mods.size()>0){
+        cout << "Mods disponibles: " << endl;
+        for (const Mod& mod : mods){ //Variable const, no se puede modificar
+            cout << "- " << mod.get_name() << endl;
+        }
+    }else{
+        cout << "No hay mods disponibles para este juego" << endl;
+    }
+    cout << "\n" << endl;
 }
 
+void Videojuego::agregarDLC(const DLC& dlc){ //Función para los DLC's
+    dlcs.push_back(dlc);
+}
+
+void Videojuego::agregarMod(const Mod& mod){
+    mods.push_back(mod);
+}
+
+void Videojuego::buscarDLC(const string& nombreDLC){ //Buscador de DLC's por nombre
+    for(const DLC& dlc : dlcs){
+        if(dlc.get_name() == nombreDLC){ //get_name método de contenido
+            dlc.muestra_dlc();
+            return;
+        }
+    }
+    cout << "No se encontro el DLC" << endl;
+}
+
+void Videojuego::buscarMod(const string& nombreMod){ //Análogamente a los DLC's
+    for(const Mod& mod : mods){
+        if(mod.get_name() == nombreMod){
+            mod.muestra_mod();
+            return;
+        }
+        
+    }
+    cout << "No se encontró ningun mod con ese nombre: " << endl;
+}
 
 //Clase aplicación
 class App : public Contenido{
@@ -98,3 +165,5 @@ void App::muestra_app(){ //funcion muestra_contenido
     cout << "Uso de aplicación: " << use << endl;
     cout << "\n" << endl;
 }
+
+
