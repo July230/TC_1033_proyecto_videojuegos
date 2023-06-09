@@ -12,6 +12,7 @@ El proyecto consiste en una Tienda de videojuegos en formato digital, de manera 
 - No hay una base de datos de usuarios, por lo que cualquier nombre y contraseña permite entrar.
 - Sólo se puede buscar entre las opciones dispobibles, lo mismo con los extras.
 - Sólo se pueden poner los juegos y apps, así como extras desde el código fuente ya que no hay una función que permita añadirlos en la consola.
+- Utiliza extensiones de C++ 11
 
 #Casos donde no podría funcionar
 
