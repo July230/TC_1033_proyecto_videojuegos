@@ -1,3 +1,4 @@
+//Arhivo que corresponde a la tienda, aplicación de agregación
 #include<iostream>
 #include<vector>
 #include<string>
@@ -46,7 +47,25 @@ class Tienda{ //Aplicar agregación
             for(Contenido * contenido : contenidos){ //mismo bucle for
                 if(contenido->get_name() == nombreBuscado){ //busca un nombre de contenido* que coincida con nombreBuscado
                     contenido->muestra_contenido(); //Muestra el contenido del videojuego o app buscado
-                    encontrado = true;
+
+                    //Buscador de DLC's y Mods
+                    if(dynamic_cast<Videojuego*> (contenido)){
+                        cout << "¿Desea buscar un DLC o Mod? s/n: ";
+                        string option;
+                        cin >> option;
+                        cin.ignore(); //Evitar que se "brinque" el buscador
+                        if(option == "S" || option == "s"){ //operador "or" ||
+                            cout << "Escribe el nombre del DLC o mod: ";
+                            string nombreDLCMod;
+                            getline(cin, nombreDLCMod);
+                            cout << endl;
+                            cout << "Resultados" << endl;
+                            Videojuego* videojuegoEncontrado = dynamic_cast<Videojuego*>(contenido); //Muestra objetos del tipo videojuego
+                            videojuegoEncontrado->buscarDLC(nombreDLCMod);
+                            videojuegoEncontrado->buscarMod(nombreDLCMod);
+                        }
+                    }
+                    encontrado = true; //Si se cumplen las condiciones, true
                 }
             }
             if(!encontrado){
