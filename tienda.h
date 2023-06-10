@@ -36,8 +36,8 @@ class Tienda{ //Aplicar agregación
         //Función que muestra el catalogo
         void show_contenido(){
             cout << "Catálogo disponibe" << endl;
-            for(Contenido * contenido : contenidos){ //bucle for que buscar elementos en vector de Tienda y a cada uno se le da un apuntador
-                cout << "-" << contenido->get_name() << endl; //Muestra el nombre de videojuego o app
+            for(Contenido * contenido : contenidos){ //bucle for que buscar elementos en vector de contenidos y a cada uno se le da un apuntador
+                cout << contenido->get_name() << endl; //Muestra el nombre de videojuego o app
             }
         }
         
@@ -47,9 +47,12 @@ class Tienda{ //Aplicar agregación
             for(Contenido * contenido : contenidos){ //mismo bucle for
                 if(contenido->get_name() == nombreBuscado){ //busca un nombre de contenido* que coincida con nombreBuscado
                     contenido->muestra_contenido(); //Muestra el contenido del videojuego o app buscado
+                    cout << endl;
 
                     //Buscador de DLC's y Mods
                     if(dynamic_cast<Videojuego*> (contenido)){
+                        Videojuego* videojuegoEncontrado = (dynamic_cast<Videojuego*>(contenido)); //Muestra objetos del tipo videojuego
+                        videojuegoEncontrado->muestra_videojuego();
                         cout << "¿Desea buscar un DLC o Mod? s/n: ";
                         string option;
                         cin >> option;
@@ -60,9 +63,8 @@ class Tienda{ //Aplicar agregación
                             getline(cin, nombreDLCMod);
                             cout << endl;
                             cout << "Resultados" << endl;
-                            Videojuego* videojuegoEncontrado = dynamic_cast<Videojuego*>(contenido); //Muestra objetos del tipo videojuego
-                            videojuegoEncontrado->buscarDLC(nombreDLCMod);
-                            videojuegoEncontrado->buscarMod(nombreDLCMod);
+                            videojuegoEncontrado->buscarDLC(nombreDLCMod); //Muestra el DLC encontrado
+                            videojuegoEncontrado->buscarMod(nombreDLCMod); //Muestra Mod encontrado
                         }
                     }
                     encontrado = true; //Si se cumplen las condiciones, true
