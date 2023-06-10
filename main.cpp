@@ -1,8 +1,8 @@
 //Este es el código del proyecto de tienda de videojuegos y aplicaciones
 //Ian Julián Estrada Castro - A01252823
 
+
 #include<iostream>
-#include<stdlib.h>
 #include<vector>
 #include<string>
 #include"tienda.h"
@@ -31,7 +31,7 @@ int main(){
     cont1->agregarMod(modT1);
 
     Videojuego *cont2 = new Videojuego("Hollow knight", 2017, 5, 250, "1.5", "Metroidvania", "2D");
-    DLC dlcH1("Grimm Troupe", "Introduce un jefe nuevo junto a misiones secundarias", 90.50);
+    DLC dlcH1("Grimm Troupe", "Introduce un jefe nuevo junto a misiones secundarias", 0.00);
     cont2->agregarDLC(dlcH1);
 
     Videojuego *cont3 = new Videojuego("Minecraft Bedrock", 2011, 5, 400, "1.19.81", "Sandbox", "3D, Building, Mining");
@@ -57,4 +57,5 @@ int main(){
 
     return 0;
 };
+
 
