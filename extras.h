@@ -23,7 +23,7 @@ class DLC{
             cout << "Precio: " << pricedlc << endl;
         }
         string get_name() const { //Delcarar como constante
-            return namedlc; 
+            return namedlc; //Devuelve el nombre del DLC
         }
 
 };
@@ -41,6 +41,6 @@ class Mod{
             cout << "Descripción del mod: " << desc << endl;
         }
         string get_name() const { 
-            return modname; 
+            return modname; //Devuelve el nombre del Mod
         } 
 };
