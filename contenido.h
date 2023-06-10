@@ -1,8 +1,8 @@
 //Archivo que contiene el contenido
+
 #include<iostream>
 #include<vector>
 #include<string>
-#include<stdlib.h>
 #include"extras.h"
 
 using namespace std;
@@ -102,7 +102,7 @@ void Videojuego::muestra_videojuego(){
         if(dlcs.size()>0){
         cout << "DLC's disponibles: " << endl;
         for(const DLC& dlc : dlcs){ //Variable const no se puede modificar
-            cout << "- " << dlc.get_name() << endl;
+            cout << dlc.get_name() << endl;
         }
     }else{
         cout << "No hay DLC's disponibles para este juego" << endl;
@@ -110,7 +110,7 @@ void Videojuego::muestra_videojuego(){
     if(mods.size()>0){
         cout << "Mods disponibles: " << endl;
         for (const Mod& mod : mods){ //Variable const, no se puede modificar
-            cout << "- " << mod.get_name() << endl;
+            cout << mod.get_name() << endl;
         }
     }else{
         cout << "No hay mods disponibles para este juego" << endl;
@@ -128,6 +128,7 @@ void Videojuego::agregarMod(const Mod& mod){
 
 void Videojuego::buscarDLC(const string& nombreDLC){ //Buscador de DLC's por nombre
     for(const DLC& dlc : dlcs){
+        cout << "Ver dlc" << nombreDLC << endl;
         if(dlc.get_name() == nombreDLC){ //get_name método de contenido
             dlc.muestra_dlc();
             return;
@@ -165,5 +166,6 @@ void App::muestra_app(){ //funcion muestra_contenido
     cout << "Uso de aplicación: " << use << endl;
     cout << "\n" << endl;
 }
+
 
 
