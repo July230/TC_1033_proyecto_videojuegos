@@ -1,5 +1,5 @@
 //Este es el código del proyecto de tienda de videojuegos y aplicaciones
-//Ian Julián Estrada Castro - A01252823
+//Ian Julián Estrada Castro - A01352823
 
 
 #include<iostream>
