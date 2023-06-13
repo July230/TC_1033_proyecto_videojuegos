@@ -5,6 +5,7 @@
 #include<iostream>
 #include<vector>
 #include<string>
+#include<stdlib.h>
 #include"tienda.h"
 #include"usuario.h"
 using namespace std;
