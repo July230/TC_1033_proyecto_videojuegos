@@ -4,7 +4,9 @@ Ian Julián Estrada Castro - A01252823
 Este es el código del proyecto de tienda de videojuegos y aplicaciones.
 El programa consiste en un buscador, el usuario busca el producto por nombre,
 se debe introducir el nombre exactamente igual a como aparece en el catálogo.
-TC1030.301 Programación Orientada a objetos
+TC1030.301 Programación Orientada a objetos.
+El programa termina una vez que se haya concretado la busqueda, si se quiere hacer otra,
+iniciar el programa de nuevo.
 */
 
 
