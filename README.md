@@ -1,6 +1,6 @@
 # TC_1033_proyecto_videojuegos
 En este repositorio se encuentran los archivos correspondientes al proyecto de la materia "Programación Orientada a Objetos".
-El proyecto consiste en una Tienda de videojuegos en formato digital, de manera similar a la programas como steam. Se pueden adquirir videojuegos y aplicaciones desde este programa, además se pueden añadir nuevos productos a la tienda. Los videojuegos además también cuentan con contenido descargable adicional.
+El proyecto consiste en una Tienda de videojuegos en formato digital, de manera similar a la programas como steam. Se pueden buscar videojuegos y aplicaciones desde este programa (siempre que estén en el catálogo), además se pueden añadir nuevos productos a la tienda. Los videojuegos además también cuentan con contenido descargable adicional.
 
 #Funcionalidad
 - Un usuario accede con un nombre y una contraseña que elige.
