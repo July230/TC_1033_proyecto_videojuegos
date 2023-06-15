@@ -1,4 +1,17 @@
-//Arhivo que corresponde a la tienda, aplicación de agregación
+/*
+Ian Julián Estrada Castro - A01352823
+
+Arhivo que corresponde a a la clase tienda.
+Esta clase hace uso de agregación de la clase contenido y es la clase
+que contiene los métodos de búsqueda. Se muestra el contenido de la 
+tienda para que el usuario introduzca alguno de los nombres, esta clase 
+aplicará apuntadores para encontrar el videojuego o app por nombre. Es
+importante que el nombre sea exactamente igual al pedido. Posteriormente,
+el programa mostrará contenido "extra" si es que existe, y le preguntará al
+usuario si quiere buscar alguno por nombre.
+
+*/
+
 #include<iostream>
 #include<vector>
 #include<string>
