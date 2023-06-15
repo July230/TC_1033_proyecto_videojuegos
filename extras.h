@@ -1,5 +1,12 @@
-//Archivo que contiene las clases mods y DLC's
-//Ian Julián Estrada Castro
+/*
+Ian Julián Estrada Castro - A01352823
+
+Arhivo que corresponde a las clases mod y dlc.
+Esta clase contiene los atributos y métodos correspondientes de las
+clases mod y dlc. Tienen una relación de composición con la clase 
+videojuego. No pueden operar individualmente.
+
+*/
 
 #include<iostream>
 #include<string>
@@ -23,7 +30,7 @@ class DLC{
             cout << "Precio: " << pricedlc << endl;
         }
         string get_name() const { //Delcarar como constante
-            return namedlc; //Devuelve el nombre del DLC
+            return namedlc; 
         }
 
 };
@@ -41,6 +48,7 @@ class Mod{
             cout << "Descripción del mod: " << desc << endl;
         }
         string get_name() const { 
-            return modname; //Devuelve el nombre del Mod
+            return modname; 
         } 
 };
+
