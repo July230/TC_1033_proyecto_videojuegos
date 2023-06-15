@@ -15,7 +15,7 @@ El proyecto consiste en una Tienda de videojuegos en formato digital, de manera 
 - Las busquedas deben ser hechas con el mismo nombre, lo que significa que se debe introducir un nombre exactamente igual a los que aparezcan en el catálogo
 - Utiliza extensiones de C++ 11
 - Para hacer una nueva busqueda es necesario volver a iniciar el programa
-- Compilar con g++
+- Compilar el archivo "main.cpp" con g++
 
 #Casos donde no podría funcionar
 
