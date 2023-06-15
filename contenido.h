@@ -1,4 +1,13 @@
-//Archivo que contiene el contenido
+/*
+Ian Julián Estrada Castro - A01352823
+
+Arhivo que corresponde a las clases contenido, videojuego y app.
+Esta clase contiene los atributos y métodos génerales de lo 
+que se encuentre en el contenido y se aplica herencia en las 
+clases videojuego y app. En el caso de la clase videojuego, 
+se aplica composición para las clases mod y dlc.
+
+*/
 
 #include<iostream>
 #include<vector>
@@ -166,6 +175,7 @@ void App::muestra_app(){ //funcion muestra_contenido
     cout << "Uso de aplicación: " << use << endl;
     cout << "\n" << endl;
 }
+
 
 
 
