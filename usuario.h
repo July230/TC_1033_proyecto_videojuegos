@@ -1,4 +1,12 @@
-//Archivo del usuario
+/*
+Ian Julián Estrada Castro - A01352823
+
+Arhivo que corresponde a la clase usuario.
+Esta clase contiene los atributos y métodos correspondientes de la 
+clase usuario. El usuario introduce un nombre y constraseña de 
+preferencia y se muestra sólo el nombre.
+
+*/
 
 #include<iostream>
 #include<string>
